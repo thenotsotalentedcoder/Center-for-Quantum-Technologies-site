@@ -110,6 +110,7 @@ const Contact = () => {
                     <h4 className="text-light font-medium mb-1 font-display">Address</h4>
                     <p className="text-light-dark font-sans">
                       Center for Quantum Technologies<br />
+                      Computer Science & Software Engineering Department<br />
                       NED University of Engineering & Technology,<br />
                       University Road, Karachi-75270, Pakistan
                     </p>
@@ -251,11 +252,30 @@ const Contact = () => {
             
             <div className="max-w-3xl mx-auto">
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                <div className="bg-primary-dark flex items-center justify-center">
-                  <div className="text-secondary/30 text-lg font-mono">
-                    Map location - NED University Campus
-                  </div>
-                </div>
+                {/* Google Maps Embed with your specific coordinates */}
+                <iframe 
+                  title="CQT Lab Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.1946740128635!2d67.11414!3d24.931157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU1JzUyLjIiTiA2N8KwMDYnNTEuMCJF!5e0!3m2!1sen!2s!4v1635789654123!5m2!1sen!2s" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+              <div className="mt-4 text-light text-left p-4 bg-primary rounded-lg border border-primary-light">
+                <h4 className="text-light font-medium mb-2 font-display">Location:</h4>
+                <p className="text-light-dark mb-1 font-sans">
+                  <strong>Computer Science Department</strong>
+                </p>
+                <p className="text-light-dark font-sans">
+                  W4J7+FMF, NED Colony Ring St, NED University Of Engineering & Technology, Karachi, Pakistan
+                </p>
+                <p className="text-light-dark mt-2 text-sm font-mono">
+                  24.931157, 67.114140
+                </p>
               </div>
             </div>
           </div>
@@ -265,4 +285,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

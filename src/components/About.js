@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import image from '../Assets/images/image.png'
+import ImageSlideshow from './ImageSlideshow';
+
 const About = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -39,15 +40,16 @@ const About = () => {
           >
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
-                <div className="bg-primary-dark border border-primary-light h-full w-full flex items-center justify-center">
-                  <div className="text-8xl text-secondary/20 font-display font-bold tracking-widest">CQT</div>
+                {/* This div ensures proper aspect ratio */}
+                <div className="w-full h-full">
+                  <ImageSlideshow />
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary rounded-lg border border-secondary flex items-center justify-center">
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary rounded-lg border border-secondary flex items-center justify-center z-10">
                 <span className="text-secondary font-mono font-bold">EST. 2023</span>
               </div>
               <motion.div
-                className="absolute -top-6 -left-6 w-20 h-20 rounded-full border-2 border-secondary"
+                className="absolute -top-6 -left-6 w-20 h-20 rounded-full border-2 border-secondary z-10"
                 animate={{
                   rotate: 360
                 }}
@@ -67,7 +69,6 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             variants={fadeInUp}
           >
-            {/* <h3 className="heading-md">Our Mission</h3> */}
             <p className="text-light-dark mb-6">
               The Center for Quantum Technologies (CQT) at NED University of Engineering & Technology was established in 2023 as a pioneering initiative in Pakistan aimed at fostering advanced research and innovation in the rapidly evolving field of Quantum Information Science and Technology.
             </p>
@@ -98,4 +99,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
