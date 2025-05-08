@@ -6,6 +6,7 @@ import Research from '../components/Research';
 import Projects from '../components/Projects';
 import Collaborations from '../components/Collaborations';
 import Facilities from '../components/Facilities';
+import Team from '../components/Team';
 import Contact from '../components/Contact';
 
 const Home = () => {
@@ -22,9 +23,10 @@ const Home = () => {
       <Projects />
       <Collaborations />
       <Facilities />
+      <Team />
       <Contact />
     </motion.div>
   );
 };
 
-export default Home; 
+export default Home;
